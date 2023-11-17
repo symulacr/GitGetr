@@ -1,0 +1,41 @@
+{
+  "model_config": {
+    "layers": [
+      {
+        "class_name": "Dense",
+        "config": {
+          "units": 64,
+          "activation": "relu",
+          "input_shape": [100],
+          "name": "dense_layer_1"
+        }
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "units": 32,
+          "activation": "relu",
+          "name": "dense_layer_2"
+        }
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "units": 10,
+          "activation": "softmax",
+          "name": "output_layer"
+        }
+      }
+    ]
+  },
+  "training_config": {
+    "optimizer_config": {
+      "class_name": "Adam",
+      "config": {
+        "learning_rate": 0.001
+      }
+    },
+    "loss": "categorical_crossentropy",
+    "metrics": ["accuracy"]
+  }
+}
