@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "GitGetr",
+  "version": "1.0",
+  "description": "A Chrome extension to legally download media files from GitHub repositories.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "downloads",
+    "https://api.github.com/*" 
+    // Add other necessary permissions based on specific functionalities
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+      // Add more content scripts for other domains and functionalities if needed
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": ["sandbox allow-scripts allow-forms"]
+    // Adjust the content security policy based on extension requirements for specific functionalities
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+    // Include icons of different sizes as per your extension's design
+  }
+}
