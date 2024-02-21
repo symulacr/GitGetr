@@ -4,7 +4,7 @@
 from transformers import pipeline
 
 def text_generation(input_text):
-    # Example: using GPT-3 for text generation
+    # Example: using GPT-4 for text generation
     generator = pipeline('text-generation')
     generated_text = generator(input_text, max_length=100, num_return_sequences=1)
     return generated_text
