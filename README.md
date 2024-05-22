@@ -1,6 +1,6 @@
 # GitGetr
 
-GitGetr is a powerful Chrome extension designed to facilitate the legal extraction and download of media files from GitHub repositories. This extension simplifies the process of accessing and retrieving various media types while adhering to GitHub's policies and terms of service.
+GitGetr is a powerful Chrome extension designed to facilitate the legal extraction and download of media files from GitHub repositories. This extension simplifies the process of accessing and retrieving various media types while adhering to GitHub's policies and terms of service
 
 ## Features
 
